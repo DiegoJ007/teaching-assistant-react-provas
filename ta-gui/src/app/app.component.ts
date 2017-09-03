@@ -9,6 +9,7 @@ import { AlunoService } from './aluno.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'ta-gui';
   aluno: Aluno = new Aluno();
   alunos: Aluno[] = [];
@@ -19,5 +20,15 @@ export class AppComponent {
       this.alunos.push(a.clone());
       this.aluno = new Aluno();
     }
+=======
+   aluno: Aluno = {nome: "", cpf: "", email: ""};
+   alunoService = new AlunoService();
+   alunos: Aluno[] = [];
+
+   gravar(a: Aluno): void {
+     this.alunoService.gravar(a);
+     this.alunos.push(a);
+     this.aluno = {nome: "", cpf: "", email: ""};
+>>>>>>> fd52d3e (visualizacao da lista de alunos cadastrados)
   }
 }
