@@ -1,17 +1,23 @@
 import { Component } from '@angular/core';
+import { Aluno } from './aluno';
+import { AlunoService } from './aluno.service';
 
 @Component({
   selector: 'app-root',
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-   aluno: Aluno = {nome: "Diego Refatoração", cpf: "12345678900", email: "dr@cin.ufpe.br", github: ""};
-}
+  title = 'ta-gui';
+  aluno: Aluno = new Aluno();
+  alunos: Aluno[] = [];
+  alunoService = new AlunoService();
 
-export class Aluno {
-  nome: string;
-  cpf: string;
-  email: string;
-  github: string;
+  gravar(a: Aluno): void {
+    if (this.alunoService.gravar(a)) {
+      this.alunos.push(a.clone());
+      this.aluno = new Aluno();
+    }
+  }
 }

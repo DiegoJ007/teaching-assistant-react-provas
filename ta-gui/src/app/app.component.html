@@ -16,3 +16,21 @@
     <td><input [(ngModel)]="aluno.github"></td>
   </tr>
 </table>
+<button (click)="gravar(aluno)">Gravar</button>
+
+<br><br>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>e-mail</th>
+    <th>GitHub</th>
+  </tr>
+  <tr *ngFor="let a of alunos">
+    <td>{{a.nome}}</td>
+    <td>{{a.cpf}}</td>
+    <td>{{a.email}}</td>
+    <td>{{a.github}}</td>
+  </tr>
+</table>
