@@ -1,9 +1,6 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-<<<<<<< HEAD
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-=======
 import { FormsModule } from '@angular/forms';
->>>>>>> dbc0756 (elementos do formulario para cadastro de alunos)
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,9 +14,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [
-    provideClientHydration()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
