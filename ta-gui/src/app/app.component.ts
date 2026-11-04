@@ -9,14 +9,17 @@ import { AlunoService } from './aluno.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'ta-gui';
   aluno: Aluno = new Aluno();
-  alunoService = new AlunoService();
   alunos: Aluno[] = [];
+  alunoService = new AlunoService();
 
   gravar(a: Aluno): void {
     if (this.alunoService.gravar(a)) {
       this.alunos.push(a.clone());
       this.aluno = new Aluno();
+    } else {
+      this.aluno.cpf = "";
     }
   }
 }
