@@ -1,0 +1,33 @@
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table.alunos {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+table.alunos th, table.alunos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table.alunos tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.alunos th {
+  background-color: #4CAF50;
+  color: white;
+}
