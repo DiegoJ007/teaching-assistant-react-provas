@@ -12,8 +12,9 @@ export class AppComponent {
   title = 'ta-gui';
   aluno: Aluno = new Aluno();
   alunos: Aluno[] = [];
-  alunoService = new AlunoService();
   cpfduplicado: boolean = false;
+
+  constructor(private alunoService: AlunoService) {}
 
   gravar(a: Aluno): void {
     if (this.alunoService.gravar(a)) {
