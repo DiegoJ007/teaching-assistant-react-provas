@@ -1,4 +1,4 @@
-<table>
+<table (mousemove)="onMove()">
   <tr>
     <td><label>Nome: </label></td>
     <td><input [(ngModel)]="aluno.nome"></td>
@@ -6,6 +6,7 @@
   <tr>
     <td><label>CPF: </label></td>
     <td><input [(ngModel)]="aluno.cpf"></td>
+    <td *ngIf="cpfduplicado" style="color: red; padding-left: 10px;">Já existe um aluno com esse CPF!</td>
   </tr>
   <tr>
     <td><label>e-mail: </label></td>

@@ -13,14 +13,19 @@ export class AppComponent {
   aluno: Aluno = new Aluno();
   alunos: Aluno[] = [];
   alunoService = new AlunoService();
+  cpfduplicado: boolean = false;
 
   gravar(a: Aluno): void {
     if (this.alunoService.gravar(a)) {
       this.alunos.push(a.clone());
       this.aluno = new Aluno();
     } else {
+      this.cpfduplicado = true;
       this.aluno.cpf = "";
-      alert("CPF já cadastrado");
     }
+  }
+
+  onMove(): void {
+    this.cpfduplicado = false;
   }
 }
