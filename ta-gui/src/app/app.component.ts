@@ -16,7 +16,7 @@ export class AppComponent {
 
   constructor(private alunoService: AlunoService) {}
 
-  gravar(a: Aluno): void {
+  criarAluno(a: Aluno): void {
     if (this.alunoService.gravar(a)) {
       this.alunos.push(a.clone());
       this.aluno = new Aluno();
@@ -24,6 +24,10 @@ export class AppComponent {
       this.cpfduplicado = true;
       this.aluno.cpf = "";
     }
+  }
+
+  atualizarAluno(aluno: Aluno): void {
+    this.alunoService.atualizar(aluno);
   }
 
   onMove(): void {

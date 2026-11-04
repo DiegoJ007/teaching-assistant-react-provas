@@ -17,7 +17,7 @@
     <td><input [(ngModel)]="aluno.github"></td>
   </tr>
 </table>
-<button (click)="gravar(aluno)">Gravar</button>
+<button (click)="criarAluno(aluno)">Gravar</button>
 
 <br><br>
 
@@ -26,12 +26,14 @@
     <th>Nome</th>
     <th>CPF</th>
     <th>e-mail</th>
-    <th>GitHub</th>
+    <th>Requisitos</th>
+    <th>Ger. Configuração</th>
   </tr>
   <tr *ngFor="let a of alunos">
     <td>{{a.nome}}</td>
     <td>{{a.cpf}}</td>
     <td>{{a.email}}</td>
-    <td>{{a.github}}</td>
+    <td><input [(ngModel)]="a.metas['requisitos']" (change)="atualizarAluno(a)"></td>
+    <td><input [(ngModel)]="a.metas['gerenciamentoDeConfiguracao']" (change)="atualizarAluno(a)"></td>
   </tr>
 </table>
