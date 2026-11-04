@@ -20,6 +20,7 @@ export class AppComponent {
       this.aluno = new Aluno();
     } else {
       this.aluno.cpf = "";
+      alert("CPF já cadastrado");
     }
   }
 }
