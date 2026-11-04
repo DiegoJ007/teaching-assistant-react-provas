@@ -1,0 +1,28 @@
+table {
+  margin-top: 15px;
+}
+
+th {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+td, th {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #cce6ff;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.49);
+  border-color: rgba(0, 0, 0, 0.49);
+  color: white;
+}
+
+button:hover {
+  background-color: #000000;
+  border-color: #000000;
+}

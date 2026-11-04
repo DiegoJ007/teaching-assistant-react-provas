@@ -1,0 +1,21 @@
+table {
+  margin-top: 30px;
+}
+
+th {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+td, th {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #cce6ff;
+}
+
+.meta input {
+  width: 50px;
+}
