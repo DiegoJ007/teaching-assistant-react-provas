@@ -1,5 +1,6 @@
 import React from 'react';
 import QuestionsTab from './QuestionsTab';
+import ExamAnswersSection from './ExamAnswersSection';
 
 const ProvasTab: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ const ProvasTab: React.FC = () => {
       <h2>Provas</h2>
 
       <QuestionsTab />
+      <ExamAnswersSection />
     </section>
   );
 };
