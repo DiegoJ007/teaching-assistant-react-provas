@@ -3,6 +3,7 @@ import { createApp } from './app';
 import { StudentSet } from './models/StudentSet';
 import { Classes } from './models/Classes';
 import { QuestionBank } from './models/QuestionBank';
+import { ExamSubmissionSet } from './models/ExamSubmissionSet';
 import { JsonFileRepository } from './persistence/JsonFileRepository';
 
 /**
@@ -17,14 +18,16 @@ const PORT = Number(process.env.PORT) || 3005;
 const students = new StudentSet();
 const classes = new Classes();
 const questionBank = new QuestionBank();
+const examSubmissions = new ExamSubmissionSet();
 const repository = new JsonFileRepository(path.resolve('./data/app-data.json'));
-repository.load(students, classes);
+repository.load(students, classes, examSubmissions);
 
 createApp({
   students,
   classes,
   repository,
-  questionBank
+  questionBank,
+  examSubmissions
 }).listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
